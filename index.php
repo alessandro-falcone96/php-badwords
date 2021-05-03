@@ -1,5 +1,5 @@
 <?php
-    $paragrafo = "ciao a tutti cazzo";
+    $paragrafo = "Ciao cazzo a tutti!";
     $badword = $_GET["badword"];
     $asterisks = "";
     for ($x = 1; $x <= strlen($badword); $x++) {
@@ -16,6 +16,6 @@
   </head>
   <body>
     <H1><?php echo $paragrafo ?></H1>
-    <h2>La lunghezza del paragrafo è di <?php echo strlen($paragrafo) ?> caratteri</h2>
+    <p>La lunghezza del paragrafo è di <?php echo strlen($paragrafo) ?> caratteri.</p>
   </body>
 </html>
