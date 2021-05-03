@@ -1,7 +1,11 @@
 <?php
     $paragrafo = "ciao a tutti cazzo";
     $badword = $_GET["badword"];
-    $paragrafo = str_replace($badword, "***", $paragrafo);
+    $asterisks = "";
+    for ($x = 1; $x <= strlen($badword); $x++) {
+        $asterisks .= "*";
+      }
+    $paragrafo = str_replace($badword, $asterisks, $paragrafo);
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +17,5 @@
   <body>
     <H1><?php echo $paragrafo ?></H1>
     <h2>La lunghezza del paragrafo è di <?php echo strlen($paragrafo) ?> caratteri</h2>
-    <h2><?php echo $badword ?></h2>
   </body>
 </html>
